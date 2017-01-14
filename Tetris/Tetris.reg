@@ -1,0 +1,15 @@
+REGEDIT
+; El programa SETUP puede utilizar este archivo .REG.
+;   Si no hay disponible ningún programa SETUP, las siguientes entradas se
+;   registrarán automáticamente en InitInstance con una llamada a
+;   CWinApp::RegisterShellFileTypes y COleObjectFactory::UpdateRegistryAll.
+
+HKEY_CLASSES_ROOT\.Trs = Tetris.Document
+HKEY_CLASSES_ROOT\Tetris.Document\shell\open\command = Tetris.EXE %1
+HKEY_CLASSES_ROOT\Tetris.Document\shell\open\ddeexec = [open("%1")]
+HKEY_CLASSES_ROOT\Tetris.Document\shell\open\ddeexec\application = Tetris
+    ; nota: la aplicación es opcional
+    ;  (adquiere el valor predeterminado del nombre de aplicación de "command")
+
+HKEY_CLASSES_ROOT\Tetris.Document = El Tetris
+
